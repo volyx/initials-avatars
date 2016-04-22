@@ -57,7 +57,7 @@ public class InitialsAvatarsServerUtils {
 
     public static void doInitialsResponse(final HttpServletResponse resp, final int width,
                                           final int height, final String name) throws IOException {
-        final String initial = name.substring(0, 1).toUpperCase();
+        final String initial = name.substring(0, 2).toUpperCase();
 
         final BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         final Graphics2D g2 = img.createGraphics();
@@ -71,7 +71,7 @@ public class InitialsAvatarsServerUtils {
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         // Font scale
-        final int fontSize = Math.round((Math.min(width, height) * InitialsConstants.BIG_FONT_FACTOR));
+        final int fontSize = Math.round((Math.min(width, height) * InitialsConstants.MEDIUM_FONT_FACTOR));
         final Font font = new Font(Font.SANS_SERIF, Font.PLAIN, fontSize);
         g2.setFont(font);
         final FontMetrics fm = g2.getFontMetrics();
