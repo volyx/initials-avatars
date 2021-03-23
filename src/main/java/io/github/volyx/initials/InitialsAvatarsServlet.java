@@ -32,7 +32,7 @@ public class InitialsAvatarsServlet extends HttpServlet {
     // We'll cache the color of some user for some minutes (wo in a document, it
     // should show the same color)
     // https://code.google.com/p/guava-libraries/wiki/CachesExplained
-    private static LoadingCache<String, Color> colorsCache = CacheBuilder.newBuilder().maximumSize(500).expireAfterAccess(
+    private static final LoadingCache<String, Color> colorsCache = CacheBuilder.newBuilder().maximumSize(500).expireAfterAccess(
             CACHE_EXP_IN_SECS, TimeUnit.SECONDS).build(new CacheLoader<String, Color>() {
         @Override
         public Color load(final String key) {
@@ -42,7 +42,7 @@ public class InitialsAvatarsServlet extends HttpServlet {
 
     @Override
     protected void doGet(final HttpServletRequest request, final HttpServletResponse resp)
-            throws ServletException, IOException {
+            throws IOException {
 
         final String path = request.getPathInfo().substring(1);
 
