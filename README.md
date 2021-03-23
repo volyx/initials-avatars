@@ -11,5 +11,7 @@ It includes a Servlet that can generate random initials avatars from URLs of thi
 
 <img src="https://initial-avatars.herokuapp.com/iniavatars/100x100/be.png"/>
 
-`mvn clean install`
+`mvn clean package`
+
+`java -jar target/initials-avatars-1.0-SNAPSHOT.jar`
 
