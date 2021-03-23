@@ -5,11 +5,11 @@ This project has several utilities for generating initials avatars inspired in G
 
 It includes a Servlet that can generate random initials avatars from URLs of this form `https://initial-avatars.herokuapp.com/iniavatars/100x100/dv` for get a PNG avatar of 100px with a "BD".
 
-<img src="https://initial-avatars.herokuapp.com/iniavatars/100x100/dv.png"/>
+<img src="https://initial-avatars.herokuapp.com/iniavatars/100x100/dv"/>
 
-<img src="https://initial-avatars.herokuapp.com/iniavatars/100x100/ab.png"/>
+<img src="https://initial-avatars.herokuapp.com/iniavatars/100x100/ab"/>
 
-<img src="https://initial-avatars.herokuapp.com/iniavatars/100x100/be.png"/>
+<img src="https://initial-avatars.herokuapp.com/iniavatars/100x100/be"/>
 
 `mvn clean package`
 
